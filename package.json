@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "parcel project-root/index.html --port 3000",
-    "build": "if [ \"$CF_PAGES_BRANCH\" = \"main\" ] || [ \"$COMING_SOON\" = \"1\" ]; then echo 'Building coming soon variant'; parcel build project-root/index.html --dist-dir public --public-url ./ && cp project-root/coming-soon.html public/index.html && cp project-root/images/coming-soon-bg.jpg public/coming-soon-bg.jpg; else echo 'Building full site variant'; parcel build project-root/index.html --dist-dir public --public-url ./; fi",
+    "build": "BR=${CF_PAGES_BRANCH:-$(git rev-parse --abbrev-ref HEAD 2>/dev/null || echo unknown)}; if [ \"$BR\" = \"main\" ] || [ \"$COMING_SOON\" = \"1\" ]; then echo \"Building coming soon variant (branch=$BR)\"; parcel build project-root/index.html --dist-dir public --public-url ./ && cp project-root/coming-soon.html public/index.html && cp project-root/images/coming-soon-bg.jpg public/coming-soon-bg.jpg; else echo \"Building full site variant (branch=$BR)\"; parcel build project-root/index.html --dist-dir public --public-url ./; fi",
     "build:full-site": "parcel build project-root/index.html --dist-dir public --public-url ./",
     "build:coming-soon": "COMING_SOON=1 npm run build",
     "enable-coming-soon": "echo 'Coming soon is controlled by CF_PAGES_BRANCH or COMING_SOON=1 env var.'",

@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang=en><meta charset=UTF-8><meta name=viewport content="width=device-width, initial-scale=1.0"><title>National Controls Consulting</title><link rel=stylesheet href=project-root.c18f5f84.css><link rel=icon href=logo.4ab7e37c.png><body>
+<!DOCTYPE html><html lang=en><meta charset=UTF-8><meta name=viewport content="width=device-width, initial-scale=1.0"><title>National Controls Consulting</title><link rel=stylesheet href=project-root.e7c92e58.css><link rel=icon href=logo.4ab7e37c.png><body>
     
     <header class=hero>
         <nav class=navbar>
@@ -17,6 +17,8 @@
         </div>
     </header>
 
+    
+    <div class=content-background>
     
     <section id=about class=section>
         <h2>About Us</h2>
@@ -43,22 +45,26 @@
     </section>
 
     
-    <section id=training class=section>
+    <section id=training class="section training-section">
+        <a href=#contact class=cta-btn>Schedule Training</a>
         <h2>Training Programs</h2>
         <p>Our training programs cover:</p>
-        <ul>
+        <ul class=training-list>
             <li>Power vs Control wiring and common mistakes</li>
             <li>Wireless controls realities and troubleshooting</li>
             <li>Commissioning checklists and pre-verification</li>
             <li>Reducing callbacks and maximizing profits</li>
         </ul>
-        <a href=#contact class=cta-btn>Schedule Training</a>
     </section>
+    </div>
 
     
     <section id=contact class="contact-section section">
         <h2>Contact Us</h2>
-        <form id=contactForm>
+        <div id=successMessage class=success-message style=display:none>
+            <p>✓ Thank you! Your message has been sent. We'll be in touch soon.</p>
+        </div>
+        <form id=contactForm action=/api/contact method=post>
             <input name=name placeholder="Your Name" required>
             <input type=email name=email placeholder="Your Email" required>
             <input name=company placeholder="Company (Optional)">
@@ -72,7 +78,7 @@
         <p>© 2026 National Controls Consulting | All rights reserved</p>
     </footer>
 
-    <script src=project-root.5d3a8d5e.js></script>
+    <script src=project-root.2df4fc45.js></script>
 
 
 
@@ -81,7 +87,7 @@
   <meta charset=utf-8>
   <meta name=viewport content="width=device-width,initial-scale=1">
   <title>National Control Consulting</title>
-  <link rel=stylesheet href=project-root.c18f5f84.css>
+  <link rel=stylesheet href=project-root.e7c92e58.css>
 
 
   <header>
@@ -91,6 +97,6 @@
   <main>
     <p>Welcome to the project root. This is a minimal starter site.</p>
   </main>
-  <script src=project-root.5d3a8d5e.js></script>
+  <script src=project-root.2df4fc45.js></script>
 
 

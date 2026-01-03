@@ -1,0 +1,2 @@
+document.addEventListener("DOMContentLoaded",function(){if("true"===new URLSearchParams(window.location.search).get("success")){let e=document.getElementById("successMessage"),t=document.getElementById("contactForm");e&&(e.style.display="block",t.style.display="none"),window.history.replaceState({},document.title,window.location.pathname)}console.log("National Controls Consulting site loaded")});
+//# sourceMappingURL=project-root.2df4fc45.js.map

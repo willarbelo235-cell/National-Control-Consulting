@@ -33,7 +33,7 @@
     }
     .card {
       text-align: center;
-      padding: 3rem;
+      padding: 1.5rem;
       border-radius: 12px;
       background: rgba(0, 0, 0, 0.5);
       max-width: 1100px;
@@ -43,37 +43,61 @@
       backdrop-filter: blur(10px);
     }
     .card img {
-      width: 100%;
-      max-width: 1000px;
+      width: 60%;
+      max-width: 200px;
       height: auto;
       object-fit: contain;
-      margin-bottom: 40px;
+      margin-bottom: 15px;
     }
     .company-name {
-      font-size: 2.8rem;
+      font-size: 1.2rem;
       font-weight: bold;
-      margin: -250px 0 2rem 0;
+      margin: 0 0 1rem 0;
       background: linear-gradient(180deg, #f5f5f5 0%, #b8b8b8 50%, #8a8a8a 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
       text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-      letter-spacing: 2px;
+      letter-spacing: 1px;
     }
     h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
       margin-top: 0;
       font-weight: bold;
     }
     .coming-soon-text {
-      font-size: 3rem;
+      font-size: 1.5rem;
       font-weight: bold;
-      margin: 1rem 0;
+      margin: 0.75rem 0;
     }
     p {
-      font-size: 1.2rem;
-      margin: 0.5rem 0;
+      font-size: 0.85rem;
+      margin: 0.25rem 0;
+    }
+    @media (min-width: 768px) {
+      .card {
+        padding: 3rem;
+      }
+      .card img {
+        width: 100%;
+        max-width: 600px;
+        margin-bottom: 40px;
+      }
+      .company-name {
+        font-size: 2.8rem;
+        margin: -100px 0 2rem 0;
+        letter-spacing: 2px;
+      }
+      h1 {
+        font-size: 2.5rem;
+      }
+      .coming-soon-text {
+        font-size: 3rem;
+      }
+      p {
+        font-size: 1.2rem;
+      }
     }
     .sub {
       opacity: 0.9;
@@ -83,7 +107,8 @@
 </head>
 <body>
   <div class="card">
-    <img src="./logo.ba3edf2d.png" alt="NCC logo">    <div class="company-name">National Controls Consulting</div>    <div class="coming-soon-text">Coming Soon</div>
+    <img src="./images/logo.png" alt="NCC logo">
+    <div class="company-name">National Controls Consulting</div>    <div class="coming-soon-text">Coming Soon</div>
     <h1>Independent Lighting Controls Consulting &amp; Training</h1>
     <p class="sub">From Rough-In to Commissioning &amp; Controls Without Callbacks</p>
   </div>

@@ -73,12 +73,8 @@
         <div id="successMessage" class="success-message" style="display: none;">
             <p>✓ Thank you! Your message has been sent. We'll be in touch soon.</p>
         </div>
-        <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
-            <input type="hidden" name="access_key" value="7e122848-6b2c-40e7-a93e-56f5029a9b62">
-            <input type="hidden" name="subject" value="New Contact Form Submission - NCC Website">
-            <input type="hidden" name="from_name" value="NCC Contact Form">
-            <input type="hidden" name="redirect" value="https://nationalcontrolsconsulting.com/?success=true">
-            <input type="hidden" name="replyto" value="William@nationalcontrolsconsulting.com">
+        <form id="contactForm" action="/api/contact" method="POST">
+            <input type="hidden" name="botcheck" value="">
             <input type="text" name="name" placeholder="Your Name" required>
             <input type="email" name="email" placeholder="Your Email" required>
             <input type="text" name="company" placeholder="Company (Optional)">

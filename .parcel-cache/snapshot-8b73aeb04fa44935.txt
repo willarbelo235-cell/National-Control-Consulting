@@ -7,8 +7,8 @@
 59/workspaces/National-Control-Consulting/project-root/images1767421974963531904 1
 59/workspaces/National-Control-Consulting/CLOUDFLARE-PAGES.md1767407895100004980 0
 76/workspaces/National-Control-Consulting/public/project-root.4d04da6c.css.map1767422547210544501 0
-57/workspaces/National-Control-Consulting/public/index.html1767423029979555128 0
-65/workspaces/National-Control-Consulting/public/coming-soon-bg.jpg1767423029986555129 0
+57/workspaces/National-Control-Consulting/public/index.html1767465095668633077 0
+65/workspaces/National-Control-Consulting/public/coming-soon-bg.jpg1767465095930633083 0
 64/workspaces/National-Control-Consulting/public/logo.4ab7e37c.png1767422547196544501 0
 52/workspaces/National-Control-Consulting/package.json1767465078527632700 0
 71/workspaces/National-Control-Consulting/.github/copilot-instructions.md1767422291473538872 0

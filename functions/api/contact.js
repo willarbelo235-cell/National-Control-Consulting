@@ -14,90 +14,34 @@ export async function onRequestPost(context) {
       });
     }
 
-    // Send email to William (business owner)
-    const ownerEmail = await fetch('https://api.mailchannels.net/tx/v1/send', {
+    // Use Web3Forms API (free tier)
+    const response = await fetch('https://api.web3forms.com/submit', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        personalizations: [
-          {
-            to: [{ email: 'William@nationalcontrolsconsulting.com', name: 'William' }]
-          }
-        ],
-        from: {
-          email: 'noreply@nationalcontrolsconsulting.com',
-          name: 'NCC Contact Form'
-        },
-        reply_to: {
-          email: email,
-          name: name
-        },
+        access_key: context.env.WEB3FORMS_KEY,
         subject: `New Contact Form Submission from ${name}`,
-        content: [
-          {
-            type: 'text/plain',
-            value: `New contact form submission:\n\nName: ${name}\nEmail: ${email}\nCompany: ${company}\n\nMessage:\n${message}`
-          },
-          {
-            type: 'text/html',
-            value: `
-              <h2>New Contact Form Submission</h2>
-              <p><strong>Name:</strong> ${name}</p>
-              <p><strong>Email:</strong> ${email}</p>
-              <p><strong>Company:</strong> ${company}</p>
-              <h3>Message:</h3>
-              <p>${message.replace(/\n/g, '<br>')}</p>
-            `
-          }
-        ]
+        from_name: 'NCC Contact Form',
+        to: 'William@nationalcontrolsconsulting.com',
+        reply_to: email,
+        name: name,
+        email: email,
+        company: company,
+        message: message,
+        // Auto-response to the visitor
+        autoresponse: {
+          to: email,
+          subject: 'Thank you for contacting National Controls Consulting',
+          from: 'National Controls Consulting',
+          message: `Hi ${name},\n\nThank you for reaching out to National Controls Consulting. We have received your message and will get back to you within 24-48 hours.\n\nBest regards,\nWilliam\nNational Controls Consulting`
+        }
       })
     });
 
-    // Send confirmation email to the visitor
-    const confirmationEmail = await fetch('https://api.mailchannels.net/tx/v1/send', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        personalizations: [
-          {
-            to: [{ email: email, name: name }]
-          }
-        ],
-        from: {
-          email: 'William@nationalcontrolsconsulting.com',
-          name: 'National Controls Consulting'
-        },
-        subject: 'Thank you for contacting National Controls Consulting',
-        content: [
-          {
-            type: 'text/plain',
-            value: `Hi ${name},\n\nThank you for reaching out to National Controls Consulting. We have received your message and will get back to you within 24-48 hours.\n\nHere's a copy of your message:\n\n"${message}"\n\nBest regards,\nWilliam\nNational Controls Consulting\nwww.nationalcontrolsconsulting.com`
-          },
-          {
-            type: 'text/html',
-            value: `
-              <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-                <h2 style="color: #1a1a1a;">Thank You for Contacting Us</h2>
-                <p>Hi ${name},</p>
-                <p>Thank you for reaching out to National Controls Consulting. We have received your message and will get back to you within 24-48 hours.</p>
-                <div style="background: #f4f4f4; padding: 15px; border-radius: 8px; margin: 20px 0;">
-                  <p><strong>Your message:</strong></p>
-                  <p style="font-style: italic;">"${message.replace(/\n/g, '<br>')}"</p>
-                </div>
-                <p>Best regards,<br><strong>William</strong><br>National Controls Consulting</p>
-                <p style="color: #666; font-size: 12px; margin-top: 30px;">
-                  <a href="https://www.nationalcontrolsconsulting.com">www.nationalcontrolsconsulting.com</a>
-                </p>
-              </div>
-            `
-          }
-        ]
-      })
-    });
+    const result = await response.json();
 
-    if (!ownerEmail.ok) {
-      const errorText = await ownerEmail.text();
-      console.error('MailChannels error:', errorText);
+    if (!result.success) {
+      console.error('Web3Forms error:', result);
       return new Response(JSON.stringify({ error: 'Failed to send email' }), {
         status: 500,
         headers: { 'Content-Type': 'application/json' }
@@ -109,7 +53,7 @@ export async function onRequestPost(context) {
 
   } catch (error) {
     console.error('Contact form error:', error);
-    return new Response(JSON.stringify({ error: 'Server error' }), {
+    return new Response(JSON.stringify({ error: 'Server error', details: error.message }), {
       status: 500,
       headers: { 'Content-Type': 'application/json' }
     });

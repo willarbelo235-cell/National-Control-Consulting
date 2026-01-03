@@ -1,13 +1,13 @@
-3535
+3536
 77/workspaces/National-Control-Consulting/national-controls-consulting-site.zip1767405582544897775 0
 49/workspaces/National-Control-Consulting/README.md1767405513739894585 0
 62/workspaces/National-Control-Consulting/project-root/README.md1767405900397912510 0
 63/workspaces/National-Control-Consulting/project-root/index.html1767405974888915963 0
 78/workspaces/National-Control-Consulting/project-root/images/coming-soon-bg.jpg1767418232216449514 0
-59/workspaces/National-Control-Consulting/project-root/images1767418451704454346 1
+59/workspaces/National-Control-Consulting/project-root/images1767418746821460842 1
 59/workspaces/National-Control-Consulting/CLOUDFLARE-PAGES.md1767407895100004980 0
 76/workspaces/National-Control-Consulting/public/project-root.4d04da6c.css.map1767415347971386023 0
-57/workspaces/National-Control-Consulting/public/index.html1767418271133450371 0
+57/workspaces/National-Control-Consulting/public/index.html1767418756073461046 0
 64/workspaces/National-Control-Consulting/public/logo.e2c3ac10.png1767415347961386023 0
 52/workspaces/National-Control-Consulting/.coming_soon1767415160821381903 0
 52/workspaces/National-Control-Consulting/package.json1767415160822381903 0
@@ -926,7 +926,7 @@
 84/workspaces/National-Control-Consulting/node_modules/caniuse-lite/data/regions/JO.js1767407195940972568 0
 96/workspaces/National-Control-Consulting/node_modules/@parcel/packager-wasm/src/wasm-sourcemap.js1767407193840972471 0
 96/workspaces/National-Control-Consulting/node_modules/@parcel/core/lib/TargetDescriptor.schema.js1767407195401972543 0
-46/workspaces/National-Control-Consulting/public1767415347971386023 1
+46/workspaces/National-Control-Consulting/public1767418756082461046 1
 75/workspaces/National-Control-Consulting/node_modules/@parcel/compressor-raw1767407193832972471 1
 76/workspaces/National-Control-Consulting/node_modules/@parcel/core/index.d.ts1767407195571972551 0
 103/workspaces/National-Control-Consulting/node_modules/caniuse-lite/data/features/document-execcommand.js1767407195733972559 0
@@ -1778,7 +1778,7 @@
 85/workspaces/National-Control-Consulting/node_modules/electron-to-chromium/versions.js1767407193824972470 0
 92/workspaces/National-Control-Consulting/node_modules/ordered-binary/.idea/ordered-binary.iml1767407193124972438 0
 68/workspaces/National-Control-Consulting/node_modules/chalk/readme.md1767407193916972474 0
-68/workspaces/National-Control-Consulting/project-root/images/logo.png1767406729430950942 0
+68/workspaces/National-Control-Consulting/project-root/images/logo.png1767418676061459285 0
 76/workspaces/National-Control-Consulting/node_modules/@parcel/watcher/LICENSE1767407193397972450 0
 104/workspaces/National-Control-Consulting/node_modules/msgpackr-extract/node_modules/detect-libc/README.md1767407193944972476 0
 73/workspaces/National-Control-Consulting/node_modules/@parcel/core/LICENSE1767407194119972484 0
@@ -3341,6 +3341,7 @@
 95/workspaces/National-Control-Consulting/node_modules/caniuse-lite/data/features/css-any-link.js1767407195374972542 0
 84/workspaces/National-Control-Consulting/node_modules/caniuse-lite/data/regions/HN.js1767407195867972565 0
 84/workspaces/National-Control-Consulting/node_modules/caniuse-lite/data/regions/UZ.js1767407196324972586 0
+64/workspaces/National-Control-Consulting/public/logo.ba3edf2d.png1767418756073461046 0
 82/workspaces/National-Control-Consulting/node_modules/@parcel/transformer-babel/src1767407194104972483 1
 94/workspaces/National-Control-Consulting/node_modules/@parcel/packager-wasm/lib/WasmPackager.js1767407193873972472 0
 84/workspaces/National-Control-Consulting/node_modules/caniuse-lite/data/regions/SV.js1767407196263972583 0

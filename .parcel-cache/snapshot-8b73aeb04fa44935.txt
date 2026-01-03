@@ -1,4 +1,4 @@
-3535
+3536
 77/workspaces/National-Control-Consulting/national-controls-consulting-site.zip1767422291551538873 0
 49/workspaces/National-Control-Consulting/README.md1767405513739894585 0
 62/workspaces/National-Control-Consulting/project-root/README.md1767405900397912510 0
@@ -7,7 +7,8 @@
 59/workspaces/National-Control-Consulting/project-root/images1767421974963531904 1
 59/workspaces/National-Control-Consulting/CLOUDFLARE-PAGES.md1767407895100004980 0
 76/workspaces/National-Control-Consulting/public/project-root.4d04da6c.css.map1767422547210544501 0
-57/workspaces/National-Control-Consulting/public/index.html1767422547209544501 0
+57/workspaces/National-Control-Consulting/public/index.html1767422547261544502 0
+65/workspaces/National-Control-Consulting/public/coming-soon-bg.jpg1767422547312544503 0
 64/workspaces/National-Control-Consulting/public/logo.4ab7e37c.png1767422547196544501 0
 52/workspaces/National-Control-Consulting/.coming_soon1767422291472538872 0
 52/workspaces/National-Control-Consulting/package.json1767422291551538873 0
@@ -398,7 +399,7 @@
 73/workspaces/National-Control-Consulting/node_modules/@swc/helpers/scripts1767422527997544078 1
 88/workspaces/National-Control-Consulting/node_modules/type-fest/source/promise-value.d.ts1767422527070544058 0
 93/workspaces/National-Control-Consulting/node_modules/type-fest/source/fixed-length-array.d.ts1767422526917544054 0
-69/workspaces/National-Control-Consulting/project-root/coming-soon.html1767422501159543487 0
+69/workspaces/National-Control-Consulting/project-root/coming-soon.html1767422844368551043 0
 88/workspaces/National-Control-Consulting/node_modules/type-fest/source/tsconfig-json.d.ts1767422527134544059 0
 99/workspaces/National-Control-Consulting/node_modules/.bin/node-gyp-build-optional-packages-optional1767422529813544118 0
 86/workspaces/National-Control-Consulting/node_modules/type-fest/source/stringified.d.ts1767422527125544059 0
@@ -926,7 +927,7 @@
 84/workspaces/National-Control-Consulting/node_modules/caniuse-lite/data/regions/JO.js1767422529194544105 0
 96/workspaces/National-Control-Consulting/node_modules/@parcel/packager-wasm/src/wasm-sourcemap.js1767422526577544047 0
 96/workspaces/National-Control-Consulting/node_modules/@parcel/core/lib/TargetDescriptor.schema.js1767422528038544079 0
-46/workspaces/National-Control-Consulting/public1767422547212544501 1
+46/workspaces/National-Control-Consulting/public1767422547263544502 1
 75/workspaces/National-Control-Consulting/node_modules/@parcel/compressor-raw1767422526501544045 1
 76/workspaces/National-Control-Consulting/node_modules/@parcel/core/index.d.ts1767422528360544086 0
 103/workspaces/National-Control-Consulting/node_modules/caniuse-lite/data/features/document-execcommand.js1767422528831544097 0

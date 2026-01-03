@@ -4,8 +4,14 @@ Cloudflare Pages configuration
 - Build output directory: `public`
 
 Notes:
-- The `build` script simply copies the `project-root` folder into `public`. If you'd prefer to serve directly from `project-root`, set the output directory in Pages to `project-root` and leave the build command blank.
-- To test locally you can run:
+- The `build` script now uses Parcel to bundle and optimize assets from `project-root` into `public`.
+- For local development with hot reload:
+
+```bash
+npm run dev
+```
+
+- To test the production build locally:
 
 ```bash
 npm run build

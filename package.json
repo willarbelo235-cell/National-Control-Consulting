@@ -3,6 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "rm -rf public && mkdir -p public && cp -r project-root/* public"
+    "dev": "parcel project-root/index.html --port 3000",
+    "build": "parcel build project-root/index.html --dist-dir public --public-url ./"
+  },
+  "devDependencies": {
+    "parcel": "^2.9.3"
   }
 }

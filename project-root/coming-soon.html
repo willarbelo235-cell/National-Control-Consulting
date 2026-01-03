@@ -15,11 +15,17 @@
       justify-content: center;
       background-image: url('./coming-soon-bg.jpg');
       background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
+      background-position: center top;
+      background-attachment: scroll;
       font-family: Arial, Helvetica, sans-serif;
       color: #fff;
       position: relative;
+    }
+    @media (min-width: 768px) {
+      body {
+        background-position: center;
+        background-attachment: fixed;
+      }
     }
     body::before {
       content: '';
@@ -81,12 +87,15 @@
       }
       .card img {
         width: 100%;
-        max-width: 600px;
-        margin-bottom: 40px;
+        max-width: 1000px;
+        margin-bottom: 0px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
       }
       .company-name {
         font-size: 2.8rem;
-        margin: -100px 0 2rem 0;
+        margin: 30px 0 2rem 0;
         letter-spacing: 2px;
       }
       h1 {

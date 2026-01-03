@@ -1,14 +1,15 @@
-3537
+3538
 77/workspaces/National-Control-Consulting/national-controls-consulting-site.zip1767405582544897775 0
 49/workspaces/National-Control-Consulting/README.md1767405513739894585 0
 62/workspaces/National-Control-Consulting/project-root/README.md1767405900397912510 0
 63/workspaces/National-Control-Consulting/project-root/index.html1767405974888915963 0
 78/workspaces/National-Control-Consulting/project-root/images/coming-soon-bg.jpg1767418232216449514 0
-59/workspaces/National-Control-Consulting/project-root/images1767418746821460842 1
+59/workspaces/National-Control-Consulting/project-root/images1767419191907470640 1
 59/workspaces/National-Control-Consulting/CLOUDFLARE-PAGES.md1767407895100004980 0
 76/workspaces/National-Control-Consulting/public/project-root.4d04da6c.css.map1767415347971386023 0
-57/workspaces/National-Control-Consulting/public/index.html1767418870364463562 0
-65/workspaces/National-Control-Consulting/public/coming-soon-bg.jpg1767418870374463562 0
+57/workspaces/National-Control-Consulting/public/index.html1767419212224471087 0
+65/workspaces/National-Control-Consulting/public/coming-soon-bg.jpg1767419012192466684 0
+64/workspaces/National-Control-Consulting/public/logo.4ab7e37c.png1767419212224471087 0
 64/workspaces/National-Control-Consulting/public/logo.e2c3ac10.png1767415347961386023 0
 52/workspaces/National-Control-Consulting/.coming_soon1767415160821381903 0
 52/workspaces/National-Control-Consulting/package.json1767418862762463395 0
@@ -399,7 +400,7 @@
 73/workspaces/National-Control-Consulting/node_modules/@swc/helpers/scripts1767407195372972542 1
 88/workspaces/National-Control-Consulting/node_modules/type-fest/source/promise-value.d.ts1767407194164972486 0
 93/workspaces/National-Control-Consulting/node_modules/type-fest/source/fixed-length-array.d.ts1767407194048972481 0
-69/workspaces/National-Control-Consulting/project-root/coming-soon.html1767419005972466547 0
+69/workspaces/National-Control-Consulting/project-root/coming-soon.html1767419196951470751 0
 88/workspaces/National-Control-Consulting/node_modules/type-fest/source/tsconfig-json.d.ts1767407194222972489 0
 99/workspaces/National-Control-Consulting/node_modules/.bin/node-gyp-build-optional-packages-optional1767407196380972589 0
 86/workspaces/National-Control-Consulting/node_modules/type-fest/source/stringified.d.ts1767407194207972488 0
@@ -927,7 +928,7 @@
 84/workspaces/National-Control-Consulting/node_modules/caniuse-lite/data/regions/JO.js1767407195940972568 0
 96/workspaces/National-Control-Consulting/node_modules/@parcel/packager-wasm/src/wasm-sourcemap.js1767407193840972471 0
 96/workspaces/National-Control-Consulting/node_modules/@parcel/core/lib/TargetDescriptor.schema.js1767407195401972543 0
-46/workspaces/National-Control-Consulting/public1767418870366463562 1
+46/workspaces/National-Control-Consulting/public1767419212233471088 1
 75/workspaces/National-Control-Consulting/node_modules/@parcel/compressor-raw1767407193832972471 1
 76/workspaces/National-Control-Consulting/node_modules/@parcel/core/index.d.ts1767407195571972551 0
 103/workspaces/National-Control-Consulting/node_modules/caniuse-lite/data/features/document-execcommand.js1767407195733972559 0
@@ -1779,7 +1780,7 @@
 85/workspaces/National-Control-Consulting/node_modules/electron-to-chromium/versions.js1767407193824972470 0
 92/workspaces/National-Control-Consulting/node_modules/ordered-binary/.idea/ordered-binary.iml1767407193124972438 0
 68/workspaces/National-Control-Consulting/node_modules/chalk/readme.md1767407193916972474 0
-68/workspaces/National-Control-Consulting/project-root/images/logo.png1767418676061459285 0
+68/workspaces/National-Control-Consulting/project-root/images/logo.png1767419139965469497 0
 76/workspaces/National-Control-Consulting/node_modules/@parcel/watcher/LICENSE1767407193397972450 0
 104/workspaces/National-Control-Consulting/node_modules/msgpackr-extract/node_modules/detect-libc/README.md1767407193944972476 0
 73/workspaces/National-Control-Consulting/node_modules/@parcel/core/LICENSE1767407194119972484 0

@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "parcel project-root/index.html --port 3000",
-    "build": "parcel build project-root/index.html --dist-dir public --public-url ./ && cp project-root/coming-soon.html public/index.html",
+    "build": "parcel build project-root/index.html --dist-dir public --public-url ./ && cp project-root/coming-soon.html public/index.html && cp project-root/images/coming-soon-bg.jpg public/coming-soon-bg.jpg",
     "build:full-site": "parcel build project-root/index.html --dist-dir public --public-url ./",
     "build:coming-soon": "npm run build",
     "enable-coming-soon": "echo 'Coming soon is now always enabled in the build script. Use develop branch for full site preview.'",

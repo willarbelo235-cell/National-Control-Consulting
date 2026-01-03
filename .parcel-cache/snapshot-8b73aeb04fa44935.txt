@@ -7,10 +7,10 @@
 59/workspaces/National-Control-Consulting/project-root/images1767418746821460842 1
 59/workspaces/National-Control-Consulting/CLOUDFLARE-PAGES.md1767407895100004980 0
 76/workspaces/National-Control-Consulting/public/project-root.4d04da6c.css.map1767415347971386023 0
-57/workspaces/National-Control-Consulting/public/index.html1767418756073461046 0
+57/workspaces/National-Control-Consulting/public/index.html1767418756157461048 0
 64/workspaces/National-Control-Consulting/public/logo.e2c3ac10.png1767415347961386023 0
 52/workspaces/National-Control-Consulting/.coming_soon1767415160821381903 0
-52/workspaces/National-Control-Consulting/package.json1767415160822381903 0
+52/workspaces/National-Control-Consulting/package.json1767418862762463395 0
 71/workspaces/National-Control-Consulting/.github/copilot-instructions.md1767408642026039605 0
 47/workspaces/National-Control-Consulting/.github1767408224043020229 1
 93/workspaces/National-Control-Consulting/node_modules/node-gyp-build-optional-packages/LICENSE1767407193005972432 0
@@ -398,7 +398,7 @@
 73/workspaces/National-Control-Consulting/node_modules/@swc/helpers/scripts1767407195372972542 1
 88/workspaces/National-Control-Consulting/node_modules/type-fest/source/promise-value.d.ts1767407194164972486 0
 93/workspaces/National-Control-Consulting/node_modules/type-fest/source/fixed-length-array.d.ts1767407194048972481 0
-69/workspaces/National-Control-Consulting/project-root/coming-soon.html1767418457411454472 0
+69/workspaces/National-Control-Consulting/project-root/coming-soon.html1767418852838463176 0
 88/workspaces/National-Control-Consulting/node_modules/type-fest/source/tsconfig-json.d.ts1767407194222972489 0
 99/workspaces/National-Control-Consulting/node_modules/.bin/node-gyp-build-optional-packages-optional1767407196380972589 0
 86/workspaces/National-Control-Consulting/node_modules/type-fest/source/stringified.d.ts1767407194207972488 0

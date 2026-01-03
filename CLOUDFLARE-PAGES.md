@@ -23,8 +23,15 @@ python3 -m http.server --directory public 8000
 To build and preview the *coming soon* page locally:
 
 ```bash
+# Option A: use environment variable
 COMING_SOON=1 npm run build
 python3 -m http.server --directory public 8000
+
+# Option B: use the repo toggle file (no Cloudflare permissions required)
+npm run enable-coming-soon   # creates, commits and pushes .coming_soon
+# Wait for Pages to deploy (or run `npm run build` locally to test)
+# To disable:
+npm run disable-coming-soon  # removes, commits and pushes .coming_soon
 ```
 
 Or use the convenience script:

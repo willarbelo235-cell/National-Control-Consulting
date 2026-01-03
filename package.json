@@ -4,8 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "parcel project-root/index.html --port 3000",
-    "build": "parcel build project-root/index.html --dist-dir public --public-url ./ && if [ \"$COMING_SOON\" = \"1\" ]; then cp project-root/coming-soon.html public/index.html; fi",
-    "build:coming-soon": "COMING_SOON=1 npm run build",
+    "build": "parcel build project-root/index.html --dist-dir public --public-url ./ && if [ -f .coming_soon ] || [ \"$COMING_SOON\" = \"1\" ]; then cp project-root/coming-soon.html public/index.html; fi",
+    "build:coming-soon": "npm run build",
+    "enable-coming-soon": "sh -c 'touch .coming_soon && git add .coming_soon && git commit -m \"Enable Coming Soon\" && git push origin main'",
+    "disable-coming-soon": "sh -c 'git rm -f .coming_soon && git commit -m \"Disable Coming Soon\" && git push origin main'",
     "preview": "npm run build && python3 -m http.server --directory public 8000"
   },
   "devDependencies": {

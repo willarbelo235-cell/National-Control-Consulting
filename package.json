@@ -7,8 +7,8 @@
     "build": "parcel build project-root/index.html --dist-dir public --public-url ./ && cp project-root/coming-soon.html public/index.html && cp project-root/images/coming-soon-bg.jpg public/coming-soon-bg.jpg",
     "build:full-site": "parcel build project-root/index.html --dist-dir public --public-url ./",
     "build:coming-soon": "npm run build",
-    "enable-coming-soon": "echo 'Coming soon is now always enabled in the build script. Use develop branch for full site preview.'",
-    "disable-coming-soon": "echo 'To disable coming soon, use the develop branch or npm run build:full-site'",
+    "enable-coming-soon": "sh -c 'touch .coming_soon && git add .coming_soon && git commit -m \"Enable Coming Soon\" && git push origin main'",
+    "disable-coming-soon": "sh -c 'git rm -f .coming_soon && git commit -m \"Disable Coming Soon\" && git push origin main'",
     "preview": "npm run build && python3 -m http.server --directory public 8000"
   },
   "devDependencies": {

@@ -1,4 +1,4 @@
-3536
+3535
 77/workspaces/National-Control-Consulting/national-controls-consulting-site.zip1767422291551538873 0
 49/workspaces/National-Control-Consulting/README.md1767405513739894585 0
 62/workspaces/National-Control-Consulting/project-root/README.md1767405900397912510 0
@@ -7,11 +7,10 @@
 59/workspaces/National-Control-Consulting/project-root/images1767421974963531904 1
 59/workspaces/National-Control-Consulting/CLOUDFLARE-PAGES.md1767407895100004980 0
 76/workspaces/National-Control-Consulting/public/project-root.4d04da6c.css.map1767422547210544501 0
-57/workspaces/National-Control-Consulting/public/index.html1767422852366551219 0
-65/workspaces/National-Control-Consulting/public/coming-soon-bg.jpg1767422852372551219 0
+57/workspaces/National-Control-Consulting/public/index.html1767423029979555128 0
+65/workspaces/National-Control-Consulting/public/coming-soon-bg.jpg1767423029986555129 0
 64/workspaces/National-Control-Consulting/public/logo.4ab7e37c.png1767422547196544501 0
-52/workspaces/National-Control-Consulting/.coming_soon1767422291472538872 0
-52/workspaces/National-Control-Consulting/package.json1767422291551538873 0
+52/workspaces/National-Control-Consulting/package.json1767465078527632700 0
 71/workspaces/National-Control-Consulting/.github/copilot-instructions.md1767422291473538872 0
 47/workspaces/National-Control-Consulting/.github1767422291472538872 1
 93/workspaces/National-Control-Consulting/node_modules/node-gyp-build-optional-packages/LICENSE1767422526342544042 0
@@ -2119,7 +2118,7 @@
 105/workspaces/National-Control-Consulting/node_modules/caniuse-lite/data/features/form-submit-attributes.js1767422529018544101 0
 81/workspaces/National-Control-Consulting/node_modules/semver/classes/comparator.js1767422526627544048 0
 84/workspaces/National-Control-Consulting/node_modules/caniuse-lite/data/regions/GG.js1767422529046544101 0
-39/workspaces/National-Control-Consulting1767422547168544500 1
+39/workspaces/National-Control-Consulting1767461307274549682 1
 86/workspaces/National-Control-Consulting/node_modules/@parcel/core/lib/public/Bundle.js1767422527227544061 0
 70/workspaces/National-Control-Consulting/node_modules/get-port/index.js1767422526403544043 0
 67/workspaces/National-Control-Consulting/node_modules/@parcel/logger1767422526589544047 1

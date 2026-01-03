@@ -57,13 +57,12 @@ export async function onRequestPost(context) {
             <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
               <h2 style="color: #1a1a1a;">Thank You for Reaching Out!</h2>
               <p>Hi ${name},</p>
-              <p>Thank you for contacting National Controls Consulting. We have received your message and will get back to you within 24-48 hours.</p>
-              <div style="background: #f4f4f4; padding: 15px; border-radius: 8px; margin: 20px 0;">
-                <p style="margin: 0;"><strong>Your message:</strong></p>
-                <p style="font-style: italic; margin: 10px 0 0 0;">"${message}"</p>
-              </div>
-              <p>In the meantime, if you have any urgent questions, feel free to reply directly to this email.</p>
-              <p style="margin-top: 30px;">Best regards,<br><strong>William</strong><br>National Controls Consulting</p>
+              <p>Thank you for your interest in lighting controls consultations and training. A member of our team will reach out to you soon with more details.</p>
+              <p>We look forward to helping you meet your goals and get your projects over the finish line on time.</p>
+              <p style="margin-top: 30px;">
+                <strong>Owner/Principal</strong><br>
+                William Arbelo
+              </p>
               <hr style="border: none; border-top: 1px solid #ddd; margin: 30px 0;">
               <p style="color: #666; font-size: 12px;">
                 <a href="https://nationalcontrolsconsulting.com" style="color: #0ab4ff;">nationalcontrolsconsulting.com</a><br>

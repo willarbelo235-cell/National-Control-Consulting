@@ -26,6 +26,8 @@
         </div>
     </header>
 
+    <!-- MAIN CONTENT WITH BACKGROUND -->
+    <div class="content-background">
     <!-- ABOUT -->
     <section id="about" class="section">
         <h2>About Us</h2>
@@ -52,22 +54,26 @@
     </section>
 
     <!-- TRAINING -->
-    <section id="training" class="section">
+    <section id="training" class="section training-section">
+        <a href="#contact" class="cta-btn">Schedule Training</a>
         <h2>Training Programs</h2>
         <p>Our training programs cover:</p>
-        <ul>
+        <ul class="training-list">
             <li>Power vs Control wiring and common mistakes</li>
             <li>Wireless controls realities and troubleshooting</li>
             <li>Commissioning checklists and pre-verification</li>
             <li>Reducing callbacks and maximizing profits</li>
         </ul>
-        <a href="#contact" class="cta-btn">Schedule Training</a>
     </section>
+    </div>
 
     <!-- CONTACT -->
     <section id="contact" class="section contact-section">
         <h2>Contact Us</h2>
-        <form id="contactForm">
+        <div id="successMessage" class="success-message" style="display: none;">
+            <p>✓ Thank you! Your message has been sent. We'll be in touch soon.</p>
+        </div>
+        <form id="contactForm" action="/api/contact" method="POST">
             <input type="text" name="name" placeholder="Your Name" required>
             <input type="email" name="email" placeholder="Your Email" required>
             <input type="text" name="company" placeholder="Company (Optional)">

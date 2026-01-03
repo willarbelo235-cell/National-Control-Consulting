@@ -93,11 +93,66 @@ body {
 }
 
 /* SECTION STYLES */
+.content-background {
+    background-image: url('./images/center background image 2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
 .section {
     padding: 80px 20px;
     max-width: 1000px;
     margin: auto;
     text-align: center;
+}
+
+.section h2,
+.section p {
+    background: rgba(0, 0, 0, 0.6);
+    display: block;
+    padding: 10px 20px;
+    border-radius: 8px;
+    color: #fff;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.section p {
+    margin-bottom: 1rem;
+}
+
+/* TRAINING SECTION */
+.training-section .cta-btn {
+    margin-bottom: 1.5rem;
+    display: block;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.training-list {
+    list-style: disc;
+    list-style-position: inside;
+    text-align: left;
+    max-width: 500px;
+    margin: 1.5rem auto;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px 30px;
+    border-radius: 8px;
+    color: #fff;
+}
+
+.training-list li {
+    padding: 8px 0;
+    font-size: 1.1rem;
 }
 
 .cards {
@@ -143,6 +198,23 @@ body {
 
 .contact-section button:hover {
     background: #0077b3;
+}
+
+.success-message {
+    background: #10b981;
+    color: #fff;
+    padding: 20px 30px;
+    border-radius: 8px;
+    max-width: 500px;
+    margin: 0 auto 1rem auto;
+    text-align: center;
+}
+
+.success-message p {
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    font-size: 1.2rem;
 }
 
 /* FOOTER */

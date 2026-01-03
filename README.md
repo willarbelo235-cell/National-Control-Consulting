@@ -1,2 +1,5 @@
 # National-Control-Consulting
-Web Main
+index.html
+Style.css
+Script.js
+images/NCC_Logo.png

@@ -33,8 +33,21 @@ export async function onRequestPost(context) {
           message: `Name: ${name}\nEmail: ${email}\nCompany: ${company}\n\nMessage:\n${message}`
         })
       });
-      const web3Data = await web3Response.json();
-      results.web3forms = { status: web3Response.status, data: web3Data };
+      
+      const responseText = await web3Response.text();
+      let web3Data;
+      try {
+        web3Data = JSON.parse(responseText);
+      } catch {
+        web3Data = { rawResponse: responseText };
+      }
+      
+      results.web3forms = { 
+        status: web3Response.status, 
+        data: web3Data,
+        keyPresent: !!context.env.WEB3FORMS_KEY,
+        keyPrefix: context.env.WEB3FORMS_KEY ? context.env.WEB3FORMS_KEY.substring(0, 8) + '...' : 'MISSING'
+      };
     } catch (e) {
       results.web3forms = { error: e.message };
     }

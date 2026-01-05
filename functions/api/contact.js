@@ -23,17 +23,19 @@ export async function onRequestPost(context) {
     // 1. Send notification to William via Web3Forms
     try {
       const accessKey = context.env.WEB3FORMS_KEY?.trim();
-      const payload = {
+      
+      // Use form-encoded format as Web3Forms expects
+      const formBody = new URLSearchParams({
         access_key: accessKey,
         name: name,
         email: email,
         message: `Company: ${company}\n\n${message}`
-      };
+      });
       
       const web3Response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload)
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: formBody
       });
       
       const responseText = await web3Response.text();

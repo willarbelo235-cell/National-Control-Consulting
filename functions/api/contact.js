@@ -25,10 +25,9 @@ export async function onRequestPost(context) {
       const accessKey = context.env.WEB3FORMS_KEY?.trim();
       const payload = {
         access_key: accessKey,
-        subject: `New Contact Form Submission from ${name}`,
-        from_name: name,
+        name: name,
         email: email,
-        message: `Name: ${name}\nEmail: ${email}\nCompany: ${company}\n\nMessage:\n${message}`
+        message: `Company: ${company}\n\n${message}`
       };
       
       const web3Response = await fetch('https://api.web3forms.com/submit', {

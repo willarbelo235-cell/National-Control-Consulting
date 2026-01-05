@@ -22,16 +22,19 @@ export async function onRequestPost(context) {
 
     // 1. Send notification to William via Web3Forms
     try {
+      const accessKey = context.env.WEB3FORMS_KEY?.trim();
+      const payload = {
+        access_key: accessKey,
+        subject: `New Contact Form Submission from ${name}`,
+        from_name: name,
+        email: email,
+        message: `Name: ${name}\nEmail: ${email}\nCompany: ${company}\n\nMessage:\n${message}`
+      };
+      
       const web3Response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          access_key: context.env.WEB3FORMS_KEY,
-          subject: `New Contact Form Submission from ${name}`,
-          from_name: name,
-          email: email,
-          message: `Name: ${name}\nEmail: ${email}\nCompany: ${company}\n\nMessage:\n${message}`
-        })
+        body: JSON.stringify(payload)
       });
       
       const responseText = await web3Response.text();
@@ -45,8 +48,9 @@ export async function onRequestPost(context) {
       results.web3forms = { 
         status: web3Response.status, 
         data: web3Data,
-        keyPresent: !!context.env.WEB3FORMS_KEY,
-        keyPrefix: context.env.WEB3FORMS_KEY ? context.env.WEB3FORMS_KEY.substring(0, 8) + '...' : 'MISSING'
+        keyPresent: !!accessKey,
+        keyLength: accessKey?.length || 0,
+        keyPrefix: accessKey ? accessKey.substring(0, 8) + '...' : 'MISSING'
       };
     } catch (e) {
       results.web3forms = { error: e.message };

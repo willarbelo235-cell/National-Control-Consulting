@@ -26,17 +26,15 @@ export async function onRequestPost(context) {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          access_key: '7e122848-6b2c-40e7-a93e-56f5029a9b62',
+          access_key: context.env.WEB3FORMS_KEY,
           subject: `New Contact Form Submission from ${name}`,
-          from_name: 'NCC Contact Form',
-          replyto: email,
-          name: name,
+          from_name: name,
           email: email,
-          company: company,
-          message: message
+          message: `Name: ${name}\nEmail: ${email}\nCompany: ${company}\n\nMessage:\n${message}`
         })
       });
-      results.web3forms = await web3Response.json();
+      const web3Data = await web3Response.json();
+      results.web3forms = { status: web3Response.status, data: web3Data };
     } catch (e) {
       results.web3forms = { error: e.message };
     }
@@ -72,13 +70,23 @@ export async function onRequestPost(context) {
           `
         })
       });
-      results.resend = await resendResponse.json();
+      const resendData = await resendResponse.json();
+      results.resend = { status: resendResponse.status, data: resendData };
     } catch (e) {
       results.resend = { error: e.message };
     }
 
+    // Check if Web3Forms succeeded
+    const web3Success = results.web3forms?.data?.success || results.web3forms?.status === 200;
+    
     // For debugging - show results instead of redirect
-    return new Response(JSON.stringify(results, null, 2), {
+    return new Response(JSON.stringify({
+      ...results,
+      web3Success,
+      recommendation: web3Success 
+        ? 'Both services working - ready to switch to redirect' 
+        : 'Check WEB3FORMS_KEY environment variable in Cloudflare Pages settings'
+    }, null, 2), {
       status: 200,
       headers: { 'Content-Type': 'application/json' }
     });

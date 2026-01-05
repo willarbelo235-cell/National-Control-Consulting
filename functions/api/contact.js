@@ -103,8 +103,10 @@ export async function onRequestPost(context) {
     const autoResponseSuccess = results.autoResponse?.status === 200;
     
     if (notificationSuccess && autoResponseSuccess) {
-      // Production: Redirect to success page
-      return Response.redirect('/?success=true', 303);
+      // Production: Redirect to thank you page
+      const url = new URL(context.request.url);
+      const redirectUrl = `${url.origin}/thank-you.html`;
+      return Response.redirect(redirectUrl, 303);
     } else {
       // If either failed, show debug info
       return new Response(JSON.stringify({

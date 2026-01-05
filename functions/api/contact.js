@@ -14,47 +14,51 @@ export async function onRequestPost(context) {
     }
 
     const results = { 
-      web3forms: null, 
-      resend: null,
-      hasResendKey: !!context.env.RESEND_API_KEY,
-      keyPrefix: context.env.RESEND_API_KEY ? context.env.RESEND_API_KEY.substring(0, 10) + '...' : 'NOT SET'
+      notification: null, 
+      autoResponse: null
     };
 
-    // 1. Send notification to William via Web3Forms
+    // 1. Send notification to William via Resend
     try {
-      const accessKey = context.env.WEB3FORMS_KEY?.trim();
-      
-      // Use form-encoded format as Web3Forms expects
-      const formBody = new URLSearchParams({
-        access_key: accessKey,
-        name: name,
-        email: email,
-        message: `Company: ${company}\n\n${message}`
-      });
-      
-      const web3Response = await fetch('https://api.web3forms.com/submit', {
+      const notificationResponse = await fetch('https://api.resend.com/emails', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: formBody
+        headers: {
+          'Authorization': `Bearer ${context.env.RESEND_API_KEY}`,
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          from: 'NCC Contact Form <noreply@nationalcontrolsconsulting.com>',
+          to: 'w.arbelo42@gmail.com',
+          subject: `New Contact Form Submission from ${name}`,
+          html: `
+            <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
+              <h2 style="color: #003366;">New Contact Form Submission</h2>
+              <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
+                <tr style="border-bottom: 1px solid #ddd;">
+                  <td style="padding: 10px; font-weight: bold;">Name:</td>
+                  <td style="padding: 10px;">${name}</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #ddd;">
+                  <td style="padding: 10px; font-weight: bold;">Email:</td>
+                  <td style="padding: 10px;"><a href="mailto:${email}">${email}</a></td>
+                </tr>
+                <tr style="border-bottom: 1px solid #ddd;">
+                  <td style="padding: 10px; font-weight: bold;">Company:</td>
+                  <td style="padding: 10px;">${company}</td>
+                </tr>
+                <tr>
+                  <td style="padding: 10px; font-weight: bold; vertical-align: top;">Message:</td>
+                  <td style="padding: 10px; white-space: pre-wrap;">${message}</td>
+                </tr>
+              </table>
+            </div>
+          `
+        })
       });
-      
-      const responseText = await web3Response.text();
-      let web3Data;
-      try {
-        web3Data = JSON.parse(responseText);
-      } catch {
-        web3Data = { rawResponse: responseText };
-      }
-      
-      results.web3forms = { 
-        status: web3Response.status, 
-        data: web3Data,
-        keyPresent: !!accessKey,
-        keyLength: accessKey?.length || 0,
-        keyPrefix: accessKey ? accessKey.substring(0, 8) + '...' : 'MISSING'
-      };
+      const notificationData = await notificationResponse.json();
+      results.notification = { status: notificationResponse.status, data: notificationData };
     } catch (e) {
-      results.web3forms = { error: e.message };
+      results.notification = { error: e.message };
     }
 
     // 2. Send auto-response to customer via Resend
@@ -88,26 +92,31 @@ export async function onRequestPost(context) {
           `
         })
       });
-      const resendData = await resendResponse.json();
-      results.resend = { status: resendResponse.status, data: resendData };
+      const autoResponseData = await resendResponse.json();
+      results.autoResponse = { status: resendResponse.status, data: autoResponseData };
     } catch (e) {
-      results.resend = { error: e.message };
+      results.autoResponse = { error: e.message };
     }
 
-    // Check if Web3Forms succeeded
-    const web3Success = results.web3forms?.data?.success || results.web3forms?.status === 200;
+    // Check if both emails succeeded
+    const notificationSuccess = results.notification?.status === 200;
+    const autoResponseSuccess = results.autoResponse?.status === 200;
     
-    // For debugging - show results instead of redirect
-    return new Response(JSON.stringify({
-      ...results,
-      web3Success,
-      recommendation: web3Success 
-        ? 'Both services working - ready to switch to redirect' 
-        : 'Check WEB3FORMS_KEY environment variable in Cloudflare Pages settings'
-    }, null, 2), {
-      status: 200,
-      headers: { 'Content-Type': 'application/json' }
-    });
+    if (notificationSuccess && autoResponseSuccess) {
+      // Production: Redirect to success page
+      return Response.redirect('/?success=true', 303);
+    } else {
+      // If either failed, show debug info
+      return new Response(JSON.stringify({
+        ...results,
+        notificationSuccess,
+        autoResponseSuccess,
+        message: 'One or both emails failed to send. See details above.'
+      }, null, 2), {
+        status: 500,
+        headers: { 'Content-Type': 'application/json' }
+      });
+    }
 
   } catch (error) {
     return new Response(JSON.stringify({ error: error.message }), {

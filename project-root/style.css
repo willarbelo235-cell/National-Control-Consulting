@@ -310,9 +310,31 @@ footer {
 
 /* Responsive cap for small screens */
 @media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        padding: 1rem;
+        gap: 1rem;
+    }
+    
     .navbar .logo, #logo {
         height: 64px;
         width: auto;
+    }
+    
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        gap: 0.5rem;
+    }
+    
+    .nav-links li {
+        width: 100%;
+    }
+    
+    .nav-links a {
+        display: block;
+        padding: 0.5rem;
     }
     
     .hero h1 {

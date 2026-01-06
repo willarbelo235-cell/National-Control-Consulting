@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - National Controls Consulting</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/logo.png">
+</head>
+<body>
+    <!-- HEADER / HERO -->
+    <header class="hero hero-internal">
+        <nav class="navbar">
+            <a href="index.html"><img src="images/logo.png" alt="National Controls Consulting Logo" class="logo"></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="process.html">Process</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="hero-content">
+            <h1>Get in Touch</h1>
+            <p>Ready to solve your lighting control issues? Let's talk.</p>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <div class="content-background">
+        <!-- CONTACT INFO -->
+        <section class="section">
+            <h2>Contact Information</h2>
+            <div class="contact-info-grid">
+                <div class="contact-info-item">
+                    <h3>📞 Phone</h3>
+                    <p><a href="tel:+1234567890" class="contact-link">(123) 456-7890</a></p>
+                    <p class="small-text">Available for immediate troubleshooting calls</p>
+                </div>
+                <div class="contact-info-item">
+                    <h3>✉️ Email</h3>
+                    <p><a href="mailto:info@nationalcontrolsconsulting.com" class="contact-link">info@nationalcontrolsconsulting.com</a></p>
+                    <p class="small-text">Typical response within 24 hours</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICE AREA -->
+        <section class="section">
+            <h2>Service Area</h2>
+            <p>Nationwide support with on-site services available throughout the United States.</p>
+            <p>Remote troubleshooting and consultation available anywhere.</p>
+        </section>
+
+        <!-- CONTACT FORM -->
+        <section class="section contact-section">
+            <h2>Send Us a Message</h2>
+            <div id="successMessage" class="success-message" style="display: none;">
+                <p>✓ Thank you! Your message has been sent. We'll be in touch soon.</p>
+            </div>
+            <form id="contactForm" action="/api/contact" method="POST">
+                <input type="hidden" name="botcheck" value="">
+                <input type="text" name="name" placeholder="Your Name *" required>
+                <input type="email" name="email" placeholder="Your Email *" required>
+                <input type="tel" name="phone" placeholder="Phone Number">
+                <input type="text" name="company" placeholder="Company Name">
+                <select name="projectType" required>
+                    <option value="">Project Type *</option>
+                    <option value="troubleshooting">Troubleshooting / Repair</option>
+                    <option value="commissioning">Commissioning Support</option>
+                    <option value="training">Training</option>
+                    <option value="review">System Review</option>
+                    <option value="other">Other</option>
+                </select>
+                <textarea name="message" rows="5" placeholder="Project Details / Issue Description *" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+
+        <!-- RESPONSE TIME -->
+        <section class="section">
+            <h2>What to Expect</h2>
+            <p><strong>Initial Response:</strong> Within 24 hours on business days</p>
+            <p><strong>Emergency Calls:</strong> Same-day callback for urgent troubleshooting</p>
+            <p><strong>Project Quotes:</strong> Detailed scope and pricing within 2-3 business days</p>
+        </section>
+
+        <!-- CTA BUTTONS -->
+        <section class="section">
+            <div class="cta-buttons">
+                <a href="tel:+1234567890" class="cta-btn primary">Call Now</a>
+                <a href="mailto:info@nationalcontrolsconsulting.com" class="cta-btn secondary">Send Email</a>
+            </div>
+        </section>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <img src="images/logo.png" alt="National Controls Consulting Logo" class="footer-logo">
+        <p>&copy; 2026 National Controls Consulting | All rights reserved</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

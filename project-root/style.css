@@ -52,6 +52,14 @@ body {
     padding: 100px 20px;
 }
 
+.hero-internal {
+    padding: 60px 20px;
+}
+
+.hero-internal h1 {
+    font-size: 2rem;
+}
+
 .hero::before {
     content: '';
     position: absolute;
@@ -306,6 +314,86 @@ footer {
 .footer-logo {
     height: 80px;
     width: auto;
+}
+
+/* SERVICE DETAIL PAGES */
+.service-detail {
+    text-align: left;
+}
+
+.service-detail h2,
+.service-detail h3 {
+    text-align: center;
+    color: #fff;
+}
+
+.service-detail p,
+.service-detail ul {
+    max-width: 800px;
+    color: #fff;
+}
+
+.service-detail li {
+    color: #fff;
+}
+
+.disclaimer {
+    font-style: italic;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* CONTACT PAGE SPECIFIC */
+.contact-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 800px;
+    margin: 2rem auto;
+}
+
+.contact-info-item {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.contact-info-item h3 {
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.contact-info-item p {
+    margin-bottom: 0.5rem;
+}
+
+.contact-link {
+    color: #0ab4ff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    display: inline-block;
+    max-width: 100%;
+}
+
+.contact-link:hover {
+    color: #fff;
+}
+
+.small-text {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.contact-section select {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #fff;
+    font-size: 1rem;
 }
 
 /* Responsive cap for small screens */

@@ -9,6 +9,11 @@
 body {
     line-height: 1.6;
     color: #333;
+    background-image: url('./images/coming-soon-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
 }
 
 /* NAVBAR */
@@ -132,6 +137,14 @@ footer {
     padding: 2rem;
     background: #1a1a1a;
     color: #fff;
+}
+
+/* TRAINING SECTION - bullet alignment */
+#training ul {
+    list-style-position: inside;
+    padding-left: 0;
+    display: inline-block;
+    text-align: left;
 }
 /* Minimal styles */
 html,body{height:100%;margin:0;font-family:system-ui,Segoe UI,Roboto,Arial}

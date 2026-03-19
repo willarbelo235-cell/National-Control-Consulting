@@ -86,6 +86,15 @@ body {
     text-align: center;
 }
 
+.section-content {
+    background: rgba(255, 255, 255, 0.88);
+    border-radius: 10px;
+    padding: 40px 48px;
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
 .cards {
     display: flex;
     justify-content: space-around;
@@ -140,7 +149,7 @@ footer {
 }
 
 /* TRAINING SECTION - bullet alignment */
-#training ul {
+.section-content ul {
     list-style-position: inside;
     padding-left: 0;
     display: inline-block;

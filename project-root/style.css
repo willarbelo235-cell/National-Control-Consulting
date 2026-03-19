@@ -26,20 +26,26 @@ body {
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.24);
     display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
     align-items: center;
     padding: 0.5rem 1.5rem;
     gap: 1.5rem;
+    max-height: 120px;
+    overflow: hidden;
 }
 
-.top-header > .logo,
-.top-header > a {
+.top-header > a,
+.top-header > img {
     flex-shrink: 0;
 }
 
-.logo {
+img.logo {
     height: 80px;
     width: auto;
+    max-height: 80px;
     display: block;
+    object-fit: contain;
 }
 
 .nav-links {

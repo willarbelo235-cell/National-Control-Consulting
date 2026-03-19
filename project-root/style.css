@@ -18,17 +18,16 @@ body {
 
 /* NAVBAR */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.35rem 1rem;
-    background: transparent;
+    display: contents;
 }
 
 .top-header {
     background: #121212;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.24);
+    display: flex;
+    align-items: center;
+    padding: 0.35rem 1rem;
 }
 
 .navbar .logo {
@@ -40,6 +39,7 @@ body {
     list-style: none;
     display: flex;
     gap: 1.1rem;
+    white-space: nowrap;
 }
 
 .nav-links a {
@@ -64,11 +64,9 @@ body {
 }
 
 .hero-content {
-    max-width: 1000px;
-    margin: 0 auto;
+    flex: 1;
     text-align: center;
-    padding: 0 20px 6px;
-    margin-top: -6px;
+    padding: 0 12px;
 }
 
 .hero h1 {
@@ -89,8 +87,7 @@ body {
 }
 
 .inner-page .hero-content {
-    padding: 0 20px 3px;
-    margin-top: -8px;
+    padding: 0 12px;
 }
 
 .inner-page .hero p {
@@ -231,7 +228,7 @@ footer {
         width: auto;
     }
 
-    .navbar {
+    .top-header {
         padding: 0.3rem 0.55rem;
     }
 

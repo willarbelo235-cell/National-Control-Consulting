@@ -4,27 +4,31 @@ set -e
 # =============================================================================
 # BUILD SCRIPT FOR NATIONAL CONTROLS CONSULTING
 # =============================================================================
-# This script controls what gets deployed to the live site.
-#
-# FULL SITE MODE (active):
-#   - Builds the full site with Parcel into public/
-#
-# NOTE:
-#   This repo previously overwrote public/index.html with coming-soon.html.
-#   That override has been removed so Cloudflare Pages will deploy the full site.
+# Simple static site — copies project-root/ files directly to public/.
+# No transpilation or bundling needed (plain HTML/CSS/JS).
 # =============================================================================
 
 echo "=== Building National Controls Consulting ==="
 
-echo "Step 1: Building with Parcel..."
-# Build all site pages and shared assets
-npx parcel build \
-	project-root/index.html \
-	project-root/about.html \
-	project-root/training.html \
-	project-root/services.html \
-	project-root/contact.html \
-	--dist-dir public --public-url ./
+# Clean previous build output
+rm -rf public
+mkdir -p public
+
+# Copy all site files to public/
+cp project-root/index.html public/
+cp project-root/about.html public/
+cp project-root/training.html public/
+cp project-root/services.html public/
+cp project-root/contact.html public/
+cp project-root/style.css public/
+cp project-root/script.js public/
+cp -r project-root/images public/
+
+# Copy coming-soon page if needed
+if [ -f ".coming_soon" ] || [ "${COMING_SOON:-0}" = "1" ]; then
+    echo "Coming-soon mode: overwriting index.html"
+    cp project-root/coming-soon.html public/index.html
+fi
 
 echo "=== Build complete ==="
 ls -la public/

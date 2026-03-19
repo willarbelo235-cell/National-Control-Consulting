@@ -21,7 +21,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
+    padding: 0.55rem 1.4rem;
     background: transparent;
 }
 
@@ -32,7 +32,7 @@ body {
 }
 
 .navbar .logo {
-    height: 120px;
+    height: 86px;
     width: auto;
 }
 
@@ -67,17 +67,18 @@ body {
     max-width: 1000px;
     margin: 0 auto;
     text-align: center;
-    padding: 24px 20px 40px;
+    padding: 6px 20px 12px;
 }
 
 .hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+    font-size: 1.45rem;
+    line-height: 1.2;
+    margin-bottom: 0.35rem;
 }
 
 .hero p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
+    font-size: 0.95rem;
+    margin-bottom: 0.7rem;
 }
 
 .inner-page {
@@ -87,7 +88,7 @@ body {
 }
 
 .inner-page .hero-content {
-    padding: 14px 20px 28px;
+    padding: 4px 20px 8px;
 }
 
 .inner-page .hero p {
@@ -101,7 +102,8 @@ body {
 .cta-btn {
     background: #fff;
     color: #0ab4ff;
-    padding: 0.8rem 2rem;
+    padding: 0.45rem 1.1rem;
+    font-size: 0.92rem;
     text-decoration: none;
     font-weight: bold;
     border-radius: 5px;
@@ -223,7 +225,19 @@ footer {
 /* Responsive cap for small screens */
 @media (max-width: 600px) {
     .navbar .logo {
-        height: 64px;
+        height: 58px;
         width: auto;
+    }
+
+    .navbar {
+        padding: 0.5rem 0.8rem;
+    }
+
+    .hero h1 {
+        font-size: 1.1rem;
+    }
+
+    .hero p {
+        font-size: 0.85rem;
     }
 }

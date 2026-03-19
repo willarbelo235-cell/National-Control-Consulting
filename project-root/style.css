@@ -112,6 +112,33 @@ img.logo {
     color: #fff;
 }
 
+.hero-cta {
+    display: inline-block;
+    margin-top: 0.35rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 999px;
+    background: rgba(244, 250, 255, 0.88);
+    color: #1d4f6d;
+    box-shadow: 0 2px 8px rgba(4, 17, 28, 0.22);
+    transition: transform 160ms ease, box-shadow 180ms ease, background-color 180ms ease, color 180ms ease;
+}
+
+.hero-cta:hover,
+.hero-cta:focus-visible {
+    background: rgba(230, 243, 251, 0.95);
+    color: #123b53;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 14px rgba(4, 17, 28, 0.28);
+}
+
+.hero-cta:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(4, 17, 28, 0.22);
+}
+
 #training .cta-btn {
     display: block;
     width: fit-content;

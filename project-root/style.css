@@ -270,13 +270,57 @@ footer {
 
 /* TRAINING SECTION - bullet alignment */
 .section-content ul {
-    list-style-position: inside;
-    padding-left: 0;
+    list-style-position: outside;
+    padding-left: 1.2em;
     display: inline-block;
     text-align: left;
 }
 
-/* Responsive — small screens */
+/* Responsive — tablet */
+@media (max-width: 768px) {
+    .top-header {
+        flex-wrap: wrap;
+        padding: 8px 16px;
+    }
+
+    img.logo {
+        height: 56px;
+        margin-right: 12px;
+    }
+
+    .navbar {
+        flex-basis: 100%;
+        margin-left: 0;
+        margin-top: 6px;
+    }
+
+    .nav-links {
+        justify-content: center;
+        gap: 14px;
+    }
+
+    .section {
+        padding: 48px 16px;
+    }
+
+    .section-content {
+        padding: 28px 24px;
+    }
+
+    .cards {
+        gap: 1rem;
+    }
+
+    .card {
+        flex: 1 1 220px;
+    }
+
+    section.contact-section {
+        padding: 48px 20px;
+    }
+}
+
+/* Responsive — small screens / phones */
 @media (max-width: 600px) {
     .top-header {
         flex-wrap: wrap;
@@ -288,14 +332,10 @@ footer {
         margin-right: 0;
     }
 
-    .navbar {
-        margin-left: auto;
-    }
-
     .hero-content {
         flex-basis: 100%;
         order: 3;
-        margin-top: 4px;
+        margin-top: 6px;
     }
 
     .hero h1 {
@@ -306,8 +346,55 @@ footer {
         font-size: 0.8rem;
     }
 
+    .navbar {
+        flex-basis: 100%;
+        margin-left: 0;
+        margin-top: 6px;
+        order: 4;
+    }
+
+    .nav-links {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .nav-links a {
+        font-size: 0.9rem;
+    }
+
     .cta-btn {
         padding: 0.4rem 0.9rem;
-        font-size: 0.8rem;
+        font-size: 0.85rem;
+    }
+
+    .section {
+        padding: 36px 10px;
+    }
+
+    .section-content {
+        padding: 22px 16px;
+    }
+
+    .cards {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .card {
+        flex: 1 1 auto;
+    }
+
+    section.contact-section {
+        padding: 36px 10px;
+    }
+
+    .contact-section textarea {
+        min-height: 150px;
+    }
+
+    footer {
+        padding: 1.2rem;
+        font-size: 0.85rem;
     }
 }

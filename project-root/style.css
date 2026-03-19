@@ -166,34 +166,36 @@ img.logo {
 }
 
 /* CONTACT FORM */
-.contact-section {
+section.contact-section {
     max-width: 100%;
     padding: 80px 60px;
 }
 
-.contact-section .section-content {
+section.contact-section .section-content {
     display: block;
     max-width: 1400px;
-    margin: auto;
+    margin: 0 auto;
+    width: 100%;
 }
 
-.contact-section form {
+section.contact-section form {
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
     width: 100%;
     max-width: 100%;
-    margin: auto;
+    margin: 0 auto;
 }
 
-.contact-section input, 
-.contact-section textarea, 
-.contact-section button {
+section.contact-section input,
+section.contact-section textarea,
+section.contact-section button {
     width: 100%;
     padding: 1rem;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 1rem;
+    box-sizing: border-box;
 }
 
 .contact-section textarea {

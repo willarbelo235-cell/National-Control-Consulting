@@ -86,8 +86,8 @@ body {
     text-align: center;
 }
 
-#training .training-content {
-    background: rgba(255, 255, 255, 0.82);
+.section-content {
+    background: rgba(255, 255, 255, 0.88);
     border-radius: 10px;
     padding: 40px 48px;
     display: inline-block;
@@ -149,7 +149,7 @@ footer {
 }
 
 /* TRAINING SECTION - bullet alignment */
-#training ul {
+.section-content ul {
     list-style-position: inside;
     padding-left: 0;
     display: inline-block;

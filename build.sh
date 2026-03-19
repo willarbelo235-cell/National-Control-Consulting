@@ -17,8 +17,14 @@ set -e
 echo "=== Building National Controls Consulting ==="
 
 echo "Step 1: Building with Parcel..."
-# Build the full site assets
-npx parcel build project-root/index.html --dist-dir public --public-url ./
+# Build all site pages and shared assets
+npx parcel build \
+	project-root/index.html \
+	project-root/about.html \
+	project-root/training.html \
+	project-root/services.html \
+	project-root/contact.html \
+	--dist-dir public --public-url ./
 
 echo "=== Build complete ==="
 ls -la public/
